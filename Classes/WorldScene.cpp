@@ -1,3 +1,4 @@
+
 #include "WorldScene.h"
 
 USING_NS_CC;
@@ -9,6 +10,7 @@ Scene* World::createScene()
     auto layer = World::create();
     scene->getPhysicsWorld()->setSpeed(3.0f);
     scene->addChild(layer);
+    scene->getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
     
     return scene;
 }
